@@ -7,10 +7,10 @@
     owner: root
     group: root
     mode: '0777'
-    
+
 - name: copy Dockerfile
   copy:
-    src: ~/ansible_roles/deploy_app/files/Dockerfile
+    src: /root/AnsibleRoles-homework/ansible_roles/deploy_app/files/Dockerfile
     dest: /tmp/homework/Dockerfile
     owner: root
     group: root
