@@ -1,0 +1,41 @@
+---
+# tasks file for deploy_app
+- name: create build directory
+  file:
+    path: /tmp/homework
+    state: directory
+    owner: root
+    group: root
+    mode: '0777'
+    
+- name: copy Dockerfile
+  copy:
+    src: ~/ansible_roles/deploy_app/files/Dockerfile
+    dest: /tmp/homework/Dockerfile
+    owner: root
+    group: root
+    mode: '0777'
+
+- name: build container image
+  docker_image:
+    name: hw1
+    build:
+        path: /tmp/homework
+        source: build
+        state: present
+
+- name: build container
+  docker_container:
+    name: ARHomework
+    image: hw1
+
+- name: copy to local
+  synchronize:
+    src: /tmp/homework/Dockerfile
+    dest: /tmp/hello-1.0.war
+    mode: pull
+
+- name: deploy app
+  synchronize:
+      src: /tmp/hello-1.0.war
+      dest: /var/lib/tomcat9/webapps/hello-1.0.war

@@ -1,0 +1,15 @@
+---
+- name: application serve configuration
+  hosts: tom
+  become: yes
+
+  roles:
+   - application_server
+
+- name: packaging servver configuration
+  hosts: mvn
+  become: yes
+
+  roles:
+   - packaging_server
+   - deploy_app
