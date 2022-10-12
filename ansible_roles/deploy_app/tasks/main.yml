@@ -32,9 +32,3 @@
     src: /tmp/homework/Dockerfile
     dest: /tmp/hello-1.0.war
     mode: pull
-
-- name: deploy app
-  synchronize:
-      src: /tmp/hello-1.0.war
-      dest: /var/lib/tomcat9/webapps/hello-1.0.war
-  delegate_to: 10.128.0.30
