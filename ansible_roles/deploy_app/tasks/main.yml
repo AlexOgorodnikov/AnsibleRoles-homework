@@ -21,7 +21,7 @@
     name: hw1
     build:
         path: /tmp/homework
-        src: build
+        source: build
     state: present 
 
 - name: build container
