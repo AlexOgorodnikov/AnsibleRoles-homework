@@ -21,7 +21,7 @@
     name: hw1
     build:
         path: /tmp/homework
-        source: build
+        source: ./Dockerfile
         state: present
 
 - name: build container
