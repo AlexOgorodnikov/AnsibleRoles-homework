@@ -1,0 +1,7 @@
+---
+# tasks file for deploy_app__to_server
+
+- name: deploy app
+  synchronize:
+      src: /tmp/hello-1.0.war
+      dest: /var/lib/tomcat9/webapps/hello-1.0.war

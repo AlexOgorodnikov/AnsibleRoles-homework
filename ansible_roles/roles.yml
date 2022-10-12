@@ -13,3 +13,10 @@
   roles:
    - packaging_server
    - deploy_app
+
+- name: final deploy_app
+  hosts: tom
+  become: yes
+
+  roles:
+   - deploy_app__to_server
