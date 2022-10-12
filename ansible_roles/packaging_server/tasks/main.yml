@@ -4,7 +4,7 @@
   apt:
     update_cache: yes
     force_apt_get: yes
-    ache_valid_time: 3600
+    cache_valid_time: 3600
 
 - name: ensure docker packages is present
   apt:
