@@ -18,6 +18,7 @@
 
 - name: build container image
   docker_image:
+    path: /tmp/homework 
     name: hw1
     state: present 
 
