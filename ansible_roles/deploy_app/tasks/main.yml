@@ -26,7 +26,8 @@
   docker_container:
     name: ARHomework
     image: hw1
-    volumes: /tmp/test:/home/app
+    volumes: 
+      - /tmp/test:/home/appcd 
 
 - name: copy to local
   synchronize:
