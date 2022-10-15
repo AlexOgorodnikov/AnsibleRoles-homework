@@ -16,3 +16,6 @@ maven
 WORKDIR /home/app
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git /home/app
 RUN mvn package
+
+WORKDIR /home/app/target
+COPY /home/app/target/hello-1.0.war /tmp/hello-1.0.war
