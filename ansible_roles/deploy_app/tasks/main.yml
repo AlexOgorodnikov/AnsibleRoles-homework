@@ -29,6 +29,6 @@
 
 - name: copy to local
   synchronize:
-    src: /tmp/homework/Dockerfile
+    src: /tmp/target/hello-1.0.war
     dest: /tmp/hello-1.0.war
     mode: pull
