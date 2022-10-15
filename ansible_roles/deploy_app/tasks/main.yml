@@ -27,7 +27,7 @@
     name: ARHomework
     image: hw1
     volumes: 
-      - /tmp/test:/home/appcd 
+      - /tmp/test:/home/app 
 
 - name: copy to local
   synchronize:
